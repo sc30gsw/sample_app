@@ -18,4 +18,9 @@ class User
     # 4.4.5演習No.1
     "#{full_name} <#{@email}>"
   end
+
+  # 4.4.5演習No.2
+  def alphabetical_name
+    "#{@last_name}, #{@first_name}"
+  end
 end
