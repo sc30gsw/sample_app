@@ -23,7 +23,9 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
   test "should get help" do
     # 5.3.2演習No.2
-    get helf_path
+    # get helf_path
+    # 5.3.2演習No.3
+    get help_path
     assert_response :success
     assert_select "title", "Help | #{@base_title}"
   end
