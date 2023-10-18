@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   # 3.4.4演習No.2_コメントアウト解除
   root 'static_pages#home'
   # 5.3.2演習No.1
