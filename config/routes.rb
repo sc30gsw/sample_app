@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   # 5.3.2演習No.3
   # get  '/help',    to: 'static_pages#help'
   # 5.3.3演習No.1
-  get  '/help',    to: 'static_pages#help', as: 'helf'
+  # get  '/help',    to: 'static_pages#help', as: 'helf'
+  # 5.3.3演習No.2
+  get  '/help',    to: 'static_pages#help'
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
   get 'up' => 'rails/health#show', as: :rails_health_check

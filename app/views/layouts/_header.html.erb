@@ -4,8 +4,12 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home",   root_path %></li>
-        <%# 5.3.3演習No.1 %>
-        <li><%= link_to "Help",   helf_path %></li>
+        <li>
+          <%# 5.3.3演習No.1 %>
+          <%#= link_to "Help",   helf_path %>
+          <%# 5.3.3演習No.2 %>
+          <%= link_to "Help", help_path %>
+        </li>
         <li><%= link_to "Log in", '#' %></li>
       </ul>
     </nav>
