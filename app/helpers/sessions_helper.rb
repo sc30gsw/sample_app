@@ -19,4 +19,10 @@ module SessionsHelper
     # 8.2.4演習No.2
     !current_user.nil?
   end
+
+  # 現在のユーザーをログアウトする
+  def log_out
+    session.delete(:user_id)
+    @current_user = nil
+  end
 end
