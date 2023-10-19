@@ -10,6 +10,6 @@ class User < ApplicationRecord
 
   has_secure_password
   # 7.3.3演習No.1
-  validates :password, presence: true, length: { minimum: 5 }
-  # validates :password, presence: true, length: { minimum: 6 }
+  # validates :password, presence: true, length: { minimum: 5 }
+  validates :password, presence: true, length: { minimum: 6 }
 end
