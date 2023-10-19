@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   # 5.4.1演習No.1
   get '/signup',  to: 'users#new'
   # 3.4.4演習No.2_コメントアウト解除
