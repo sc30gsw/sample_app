@@ -4,25 +4,40 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%# 7.2.1演習No.2 %>
-    <%= form_for(@user) do |foobar| %>
+    <%#= form_for(@user) do |foobar| %>
+    <%= form_for(@user) do |f| %>
       <%#= 7.2.1演習No.1 %>
       <%#= f.label :nome %>
       <%#= f.text_field :nome %>
 
       <%#= 7.2.1演習No.2 %>
-      <%= foobar.label :name %>
-      <%= foobar.text_field :name %>
+      <%#= foobar.label :name %>
+      <%#= foobar.text_field :name %>
 
-      <%= foobar.label :email %>
-      <%= foobar.email_field :email %>
+      <%#= foobar.label :email %>
+      <%#= foobar.email_field :email %>
 
-      <%= foobar.label :password %>
-      <%= foobar.password_field :password %>
+      <%#= foobar.label :password %>
+      <%#= foobar.password_field :password %>
 
-      <%= foobar.label :password_confirmation, "Confirmation" %>
-      <%= foobar.password_field :password_confirmation %>
+      <%#= foobar.label :password_confirmation, "Confirmation" %>
+      <%#= foobar.password_field :password_confirmation %>
 
-      <%= foobar.submit "Create my account", class: "btn btn-primary" %>
+      <%#= foobar.submit "Create my account", class: "btn btn-primary" %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
