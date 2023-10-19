@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
   get 'up' => 'rails/health#show', as: :rails_health_check
+  # 7.3.4演習No.2
+  post '/signup',  to: 'users#create'
   resources :users
 end
