@@ -5,7 +5,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
   test "invalid signup information" do
     get signup_path
     assert_no_difference 'User.count' do
-      post users_path, params: { user: { name:  "",
+      # 7.3.4演習No.3
+      post signup_path, params: { user: { name:  "",
                                          email: "user@invalid",
                                          password:              "foo",
                                          password_confirmation: "bar" } }
@@ -19,7 +20,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select 'li', 'Password is too short (minimum is 6 characters)'
 
     assert_no_difference 'User.count' do
-      post users_path, params: { user: { name:  "a" * 51,
+      # 7.3.4演習No.3
+      post signup_path, params: { user: { name:  "a" * 51,
                                          email: "a" * 244 + "@example.com",
                                          password:              "",
                                          password_confirmation: "" } }
