@@ -13,5 +13,10 @@ module ActiveSupport
     # Add more helper methods to be used by all tests here...
     # 5.3.4演習No.2
     include ApplicationHelper
+
+    # テストユーザーがログイン中の場合にtrueを返す
+    def is_logged_in?
+      !session[:user_id].nil?
+    end
   end
 end
