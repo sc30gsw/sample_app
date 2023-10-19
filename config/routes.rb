@@ -17,5 +17,8 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
   # 7.3.4演習No.2
   post '/signup',  to: 'users#create'
+  get '/login',    to: 'sessions#new'
+  post '/login',   to: 'sessions#create'
+  delete '/logut', to: 'sessions#destroy'
   resources :users
 end
