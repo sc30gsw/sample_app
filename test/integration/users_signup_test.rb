@@ -47,5 +47,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert_template 'users/show'
+    # 7.4.4演習No.1
+    assert_not flash.blank?
   end
 end
