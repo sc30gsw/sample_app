@@ -7,5 +7,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    # 7.1.3演習No.2
+    debugger
   end
 end
