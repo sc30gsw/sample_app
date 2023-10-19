@@ -1,3 +1,5 @@
+# 8.2.5演習No.2
+=begin
 class UsersController < ApplicationController
 
   def show
@@ -15,6 +17,8 @@ class UsersController < ApplicationController
     # debugger
     @user = User.new(user_params)
     if @user.save
+      # 8.2.5演習No.1
+      # log_in @user
       log_in @user
       flash[:success] = "Welcome to the Sample App!"
       # 7.4.4演習No.3
@@ -32,3 +36,4 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 end
+=end
