@@ -1,5 +1,3 @@
-# 8.2.5演習No.2
-=begin
 class UsersController < ApplicationController
 
   def show
@@ -36,4 +34,3 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 end
-=end
