@@ -6,6 +6,7 @@
     <%# 7.2.1演習No.2 %>
     <%#= form_for(@user) do |foobar| %>
     <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
       <%#= 7.2.1演習No.1 %>
       <%#= f.label :nome %>
       <%#= f.text_field :nome %>
@@ -26,16 +27,16 @@
       <%#= foobar.submit "Create my account", class: "btn btn-primary" %>
 
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, class: 'form-control' %>
 
       <%= f.label :email %>
-      <%= f.email_field :email %>
+      <%= f.email_field :email, class: 'form-control' %>
 
       <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: 'from-control' %>
 
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
