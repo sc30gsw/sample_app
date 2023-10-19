@@ -15,7 +15,9 @@ class UsersController < ApplicationController
     # debugger
     @user = User.new(user_params)
     if @user.save
-      redirect_to @user
+      # redirect_to @user
+      # 7.4.1演習No.2
+      redirect_to user_url(@user)
     else
       render 'new', status: :unprocessable_entity
     end
