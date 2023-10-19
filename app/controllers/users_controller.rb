@@ -9,5 +9,6 @@ class UsersController < ApplicationController
   def new
     # 7.1.3演習No.2
     # debugger
+    @user = User.new
   end
 end
