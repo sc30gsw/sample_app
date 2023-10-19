@@ -6,9 +6,9 @@
     <%# 7.2.1演習No.2 %>
     <%#= form_for(@user) do |foobar| %>
     <%#= 7.3.4演習No.2 %>
-    <%#= form_for(@user, url: signup_path) do |f| %>
+    <%= form_for(@user, url: signup_path) do |f| %>
     <%#= 7.3.4演習No.4 %>
-    <%= form_for(@user) do |f| %>
+    <%#= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
       <%#= 7.2.1演習No.1 %>
       <%#= f.label :nome %>
