@@ -18,6 +18,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
   test "signup page access" do
     get signup_path
     assert_template 'users/new'
-    assert_select "h1", "Users#new"
+    assert_select "h1", "Sign up"
   end
 end

@@ -1,2 +1,47 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%# 7.2.1演習No.2 %>
+    <%#= form_for(@user) do |foobar| %>
+    <%#= 7.3.4演習No.2 %>
+    <%= form_for(@user, url: signup_path) do |f| %>
+    <%#= 7.3.4演習No.4 %>
+    <%#= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%#= 7.2.1演習No.1 %>
+      <%#= f.label :nome %>
+      <%#= f.text_field :nome %>
+
+      <%#= 7.2.1演習No.2 %>
+      <%#= foobar.label :name %>
+      <%#= foobar.text_field :name %>
+
+      <%#= foobar.label :email %>
+      <%#= foobar.email_field :email %>
+
+      <%#= foobar.label :password %>
+      <%#= foobar.password_field :password %>
+
+      <%#= foobar.label :password_confirmation, "Confirmation" %>
+      <%#= foobar.password_field :password_confirmation %>
+
+      <%#= foobar.submit "Create my account", class: "btn btn-primary" %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'from-control' %>
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
