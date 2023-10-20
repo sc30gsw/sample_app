@@ -22,11 +22,11 @@ class User < ApplicationRecord
   # end
 
   # 9.1.1演習No.2（リスト9.4）
-  def self.digest(string)
-    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-                                                  BCrypt::Engine.cost
-    BCrypt::Password.create(string, cost: cost)
-  end
+  # def self.digest(string)
+  #   cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+  #                                                 BCrypt::Engine.cost
+  #   BCrypt::Password.create(string, cost: cost)
+  # end
 
   # ランダムなトークンを返す
   # def User.new_token
@@ -34,8 +34,23 @@ class User < ApplicationRecord
   # end
 
   # 9.1.1演習No.2（リスト9.4）
-  def self.new_token
-    SecureRandom.urlsafe_base64
+  # def self.new_token
+  #   SecureRandom.urlsafe_base64
+  # end
+
+  # 9.1.1演習No.2（リスト9.5）
+  class << self
+    # 渡された文字列のハッシュ値を返す
+    def digest(string)
+      cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                    BCrypt::Engine.cost
+      BCrypt::Password.create(string, cost: cost)
+    end
+
+    # ランダムなトークンを返す
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
   end
 
   # 永続セッションのためにデータベースに記憶する
