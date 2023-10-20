@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   # 5.4.1演習No.1
   get '/signup',  to: 'users#new'
   # 3.4.4演習No.2_コメントアウト解除
@@ -16,5 +17,8 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
   # 7.3.4演習No.2
   post '/signup',  to: 'users#create'
+  get '/login',    to: 'sessions#new'
+  post '/login',   to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
   resources :users
 end
