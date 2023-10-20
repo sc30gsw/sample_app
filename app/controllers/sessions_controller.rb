@@ -19,7 +19,8 @@ class SessionsController < ApplicationController
   def destroy
     # 9.1.4演習No.1
     # log_out if logged_in?
-    log_out
+    # log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 end
