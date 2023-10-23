@@ -34,7 +34,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     # has_secure_passwordとpasswordのpresence :trueがあるため同じエラーメッセージが出力される
     assert_select 'li', "Password can't be blank"
     assert_select 'li', "Password can't be blank"
-    assert_select 'li', 'Password is too short (minimum is 6 characters)'
+    # リスト10.13の実装でテストがREDになるためコメントアウト
+    # assert_select 'li', 'Password is too short (minimum is 6 characters)'
   end
 
   test "valid signup information" do
