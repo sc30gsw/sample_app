@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def new
     # 10.2.3演習No.2
-    debugger
+    # debugger
   end
 
   def create
