@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
+    if @user.update(user_params)
       # 更新に成功した場合
     else
       render 'edit'
