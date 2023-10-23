@@ -1,5 +1,5 @@
 <%# 10.1.1演習No.2 %>
-<%= form_for(@user) do |f| %>
+<%= form_for(@user, url: url) do |f| %>
   <%= render 'shared/error_messages', object: @user %>
 
   <%= f.label :name %>
