@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update]
+  before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user,   only: [:edit, :update]
+
+  def index
+  end
 
   # 10.2.1演習No.1
   # before_action :logged_in_user
