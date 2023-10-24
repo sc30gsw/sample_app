@@ -8,9 +8,7 @@
 <%= will_paginate previous_label: '← Previous', next_label: 'Next →' %>
 
 <ul class="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-  <% end %>
+  <%= render @users %>
 </ul>
 
 <%# 10.3.4演習No.1 %>
