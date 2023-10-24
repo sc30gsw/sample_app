@@ -12,7 +12,7 @@ gem 'bootstrap', '~> 5.0'
 gem 'jquery-rails'
 gem 'faker'
 gem 'will_paginate'
-gem 'bootstrap-will_paginate'
+gem "will_paginate-bootstrap-style"
 gem "sprockets-rails", "3.4.2"
 gem "importmap-rails", "1.1.5"
 gem "turbo-rails",     "1.4.0"
