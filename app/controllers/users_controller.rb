@@ -30,10 +30,11 @@ class UsersController < ApplicationController
     if @user.save
       # 8.2.5演習No.1
       # log_in @user
-      log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
       # 7.4.4演習No.3
-      redirect_to @user
+      # redirect_to @user
       # 7.4.1演習No.2
       # redirect_to user_url(@user)
     else
