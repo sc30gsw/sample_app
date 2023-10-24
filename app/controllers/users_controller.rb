@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate(page: params[:page])
+    # 11.3.3演習No.2
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
 
   # 10.2.1演習No.1
@@ -17,6 +18,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     # 7.1.3演習No.1
     # debugger
+    # 11.3.3演習No.2
+    redirect_to root_url and return unless @user.activated?
   end
 
   def new
