@@ -55,7 +55,9 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      # params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      # 10.4.1演習No.1
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :admin)
     end
 
     # ログイン済みユーザーかどうか確認
