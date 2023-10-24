@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.1"
+gem "rails", "~> 7.0.0"
 gem "bcrypt", "~> 3.1.6"
 
 gem "sassc-rails",     "2.1.2"
