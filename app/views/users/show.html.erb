@@ -15,7 +15,7 @@
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
-      <%= will_paginate @microposts %>
+      <%= will_paginate @microposts, previous_label: '← Previous', next_label: 'Next →' %>
     <% end %>
   </div>
 </div>
