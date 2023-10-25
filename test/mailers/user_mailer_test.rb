@@ -24,6 +24,7 @@ class UserMailerTest < ActionMailer::TestCase
     assert_equal [user.email], mail.to
     assert_equal ["noreply@example.com"], mail.from
     assert_match user.reset_token,        mail.body.encoded
-    assert_match CGI.escape(user.email),  mail.body.encoded
+    # 12.2.2演習No.2
+    assert_match user.email,  mail.body.encoded
   end
 end
