@@ -4,4 +4,5 @@ class Micropost < ApplicationRecord
   validates :user_id, presence: true
   # 13.3.5演習No.1 無効な送信
   # validates :content, presence: true, length: { maximum: 140 }
+  validates :content, presence: true, length: { maximum: 140 }
 end
