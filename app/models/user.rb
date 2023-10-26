@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name:  "Relationship", foreign_key: "follower_id", dependent:   :destroy
   attr_accessor :remember_token, :activation_token, :reset_token
   # 6.2.5演習No.2
   # before_save { self.email = email.downcase! }
