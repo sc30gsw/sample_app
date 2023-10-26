@@ -8,6 +8,8 @@ class MicropostsController < ApplicationController
       # 13.3.5演習No.1 有効な送信
       # flash[:success] = "Micropost created!"
       # redirect_to root_url
+      flash[:success] = "Micropost created!"
+      redirect_to root_url
     else
       @feed_items = []
       render 'static_pages/home'
