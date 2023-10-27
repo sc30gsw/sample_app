@@ -37,6 +37,7 @@ class FollowingTest < ActionDispatch::IntegrationTest
     assert_difference '@user.following.count', 1 do
       # 14.2.6演習No.2
       # post relationships_path, as: :js, params: { followed_id: @other.id }
+      post relationships_path, as: :js, params: { followed_id: @other.id }
     end
   end
 
