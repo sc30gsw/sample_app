@@ -6,8 +6,8 @@ class RelationshipsController < ApplicationController
     current_user.follow(@user)
     respond_to do |format|
       # 14.2.6演習No.1
-      # format.html { redirect_to @user }
-      format.js
+      format.html { redirect_to @user }
+      # format.js
     end
   end
 
@@ -16,8 +16,8 @@ class RelationshipsController < ApplicationController
     current_user.unfollow(@user)
     respond_to do |format|
       # 14.2.6演習No.1
-      # format.html { redirect_to @user }
-      format.js
+      format.html { redirect_to @user }
+      # format.js
     end
   end
 end
