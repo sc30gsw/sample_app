@@ -15,6 +15,9 @@
           <%# @users.each do |user| %>
             <%#= link_to gravatar_for(user, size: 30), user %>
           <%# end %>
+          <% @users.each do |user| %>
+            <%= link_to gravatar_for(user, size: 30), user %>
+          <% end %>
         </div>
       <% end %>
     </section>
@@ -25,6 +28,7 @@
       <ul class="users follow">
         <%# 14.2.3演習No.2 %>
         <%#= render @users %>
+        <%= render @users %>
       </ul>
       <%= will_paginate %>
     <% end %>
