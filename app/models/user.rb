@@ -130,7 +130,9 @@ class User < ApplicationRecord
     # 14.3.2演習No.1
     # Micropost.where("user_id IN (?)", following_ids)
     # 14.3.2演習No.2
-    Micropost.where("user_id IN (?)", id)
+    # Micropost.where("user_id IN (?)", id)
+    # 14.3.2演習No.3
+    Micropost.all
   end
 
   # ユーザーをフォローする
