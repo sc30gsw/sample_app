@@ -1,6 +1,6 @@
 <%# 10.1.1演習No.2 %>
-<%= form_for(@user, url: url) do |f| %>
-  <%= render 'shared/error_messages', object: @user %>
+<%= form_for(object, url: url) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
 
   <%= f.label :name %>
   <%= f.text_field :name, class: 'form-control' %>

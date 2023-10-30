@@ -11,6 +11,8 @@ gem "bootstrap-sass",  "3.4.1"
 gem 'bootstrap', '~> 5.0'
 gem 'jquery-rails'
 gem 'faker'
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'will_paginate'
 gem "will_paginate-bootstrap-style"
 gem "sprockets-rails", "3.4.2"
@@ -24,6 +26,7 @@ gem "sqlite3",         "1.6.1"
 
 group :development, :test do
   gem "debug",   "1.7.1", platforms: %i[ mri mingw x64_mingw ]
+  gem 'fog'
 end
 
 group :development do
