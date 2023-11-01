@@ -26,4 +26,7 @@ test:
 
 production:
   <<: *default
-  database: sample_app_prod
+  database: sample_app_production
+  username: root
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:hostname] %>
