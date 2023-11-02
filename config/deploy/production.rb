@@ -3,10 +3,10 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "52.69.36.32", user: "sample_app_user", roles: %w{app db web}
+server "3.114.207.87", user: "sample_app_user", roles: %w{app db web}
 
 set :ssh_options, {
-  keys: %w(~/.ssh/sample_app.pem),
+  keys: %w(~/.ssh/sample_app_key_pair.pem),
   forward_agent: true,
   auth_methods: %w(publickey),
 }
