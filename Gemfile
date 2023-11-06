@@ -27,7 +27,6 @@ gem 'dotenv-rails'
 
 group :development, :test do
   gem "debug",   "1.7.1", platforms: %i[ mri mingw x64_mingw ]
-  gem 'fog'
   gem "capistrano", "~> 3.10", require: false
   gem "capistrano-rails", "~> 1.6", require: false
   gem 'capistrano-rbenv', '~> 2.2'
@@ -50,3 +49,4 @@ group :test do
   gem "guard",                    "2.18.0"
   gem "guard-minitest",           "2.4.6"
 end
+gem "fog-aws", "~> 3.21"
