@@ -7,7 +7,7 @@ class RelationshipsController < ApplicationController
     respond_to do |format|
       # 14.2.6演習No.1
       format.html { redirect_to @user }
-      # format.js
+      format.js
     end
   end
 
@@ -17,7 +17,7 @@ class RelationshipsController < ApplicationController
     respond_to do |format|
       # 14.2.6演習No.1
       format.html { redirect_to @user }
-      # format.js
+      format.js
     end
   end
 end
